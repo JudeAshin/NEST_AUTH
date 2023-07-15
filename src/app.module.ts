@@ -9,9 +9,8 @@ import { AuthService } from './auth/auth.service';
 import { JwtStrategy } from './auth/jwt.strategy';
 
 @Module({
-  imports: [AuthModule,PassportModule,JwtModule.register({ secret: 'secrete',
-signOptions: { expiresIn:'10s'}}
-)],
+  imports: [AuthModule,PassportModule,
+    JwtModule.register({ secret: 'secrete',signOptions: { expiresIn:'1h'}})],
   controllers: [AppController,AuthController],
   providers: [AppService,AuthService,JwtStrategy],
 })
