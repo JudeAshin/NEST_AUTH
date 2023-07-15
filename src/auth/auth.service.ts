@@ -9,16 +9,22 @@ export class AuthService {
 
     users = [
         {
-           id: faker.datatype.uuid(), 
+           id: faker.string.uuid(), 
             userName: 'Geo',
             password: 'q1w2e3',
             role: Role.Admin,
         },
         {
-            id: faker.datatype.uuid(),
+            id: faker.string.uuid(),
             userName: 'Josh',
             password: 'r4t5y6',
             role: Role.Customer,
+        },
+        {
+            id:faker.string.uuid(),
+            userName:'Ashi',
+            password:'123456',
+            role:Role.Tester,
         },
     ];
 

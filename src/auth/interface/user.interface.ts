@@ -2,6 +2,7 @@
 export enum Role {
     Admin = 'admin',
     Customer = 'customer',
+    Tester='tester'
 }
 type User = {
     id: string;

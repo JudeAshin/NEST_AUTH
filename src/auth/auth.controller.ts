@@ -23,7 +23,7 @@ export class AuthController {
         }
     }
 
-    @Roles('admin', 'customer')
+    @Roles('admin', 'customer','tester')
     @UseGuards(JwtAuthGuard, RoleGuard)
     @Get()
     profile(@Req() req: Request, @Res() res: Response) 
